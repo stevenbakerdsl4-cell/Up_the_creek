@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply font-body bg-ink-950 text-ink-50 antialiased;
+  }
+  ::selection {
+    @apply bg-clay-500 text-white;
+  }
+}
+
+@layer components {
+  .container-px {
+    @apply px-5 sm:px-8 lg:px-12;
+  }
+  .container-mx {
+    @apply mx-auto max-w-[1400px] container-px;
+  }
+  .display-text {
+    @apply font-display uppercase leading-[0.95] tracking-tightest;
+  }
+  .heading-text {
+    @apply font-heading font-bold tracking-tight;
+  }
+  .eyebrow {
+    @apply font-heading text-xs font-bold uppercase tracking-[0.2em] text-clay-400;
+  }
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-7 py-3.5 font-heading font-bold text-sm uppercase tracking-wider transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-ink-950;
+  }
+  .btn-primary {
+    @apply btn bg-clay-500 text-white hover:bg-clay-400 focus:ring-clay-400 shadow-lg shadow-clay-900/30 hover:shadow-clay-900/50 hover:-translate-y-0.5;
+  }
+  .btn-light {
+    @apply btn bg-ink-50 text-ink-950 hover:bg-clay-400 hover:text-white focus:ring-ink-50;
+  }
+  .btn-ghost {
+    @apply btn text-ink-50 border border-ink-700 hover:border-clay-500 hover:text-clay-400 focus:ring-ink-600;
+  }
+  .btn-outline {
+    @apply btn border-2 border-white text-white hover:bg-white hover:text-ink-950 focus:ring-white;
+  }
+  .card {
+    @apply bg-ink-900 rounded-2xl border border-ink-800 overflow-hidden;
+  }
+  .card-hover {
+    @apply card transition-all duration-300 hover:border-clay-600 hover:-translate-y-1;
+  }
+  .input {
+    @apply w-full rounded-xl border border-ink-700 bg-ink-900 px-4 py-3.5 text-ink-50 placeholder-ink-500 focus:border-clay-500 focus:ring-2 focus:ring-clay-500/20 focus:outline-none transition-colors;
+  }
+  .label {
+    @apply block font-heading font-semibold text-ink-200 text-xs uppercase tracking-wider mb-2;
+  }
+  .section-pad {
+    @apply py-20 lg:py-32;
+  }
+  .text-balance {
+    text-wrap: balance;
+  }
+}
